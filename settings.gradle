@@ -1,2 +1,5 @@
 rootProject.name = "SpacePhotos"
-include ':app'
+include ':spacephotos'
+include ':corefeatures'
+include ':network'
+include ':common'
