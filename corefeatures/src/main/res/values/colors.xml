@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="dls_primary">#111111</color>
+    <color name="dls_primary_80">#CC111111</color>
+    <color name="dls_background">#FFFFFF</color>
+    <color name="dls_secondary1">#747474</color>
+    <color name="dls_secondary2">#A9A9A9</color>
+    <color name="dls_secondary3">#C6C6C6</color>
+    <color name="dls_secondary4">#E4E4E4</color>
+    <color name="dls_accent1">#00524E</color>
+    <color name="dls_accent2">#027D76</color>
+</resources>

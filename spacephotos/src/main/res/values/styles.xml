@@ -1,0 +1,8 @@
+<resources>
+    <style name="AppTheme" parent="SpacePhotos">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/dls_accent1</item>
+        <item name="colorAccent">@color/dls_accent1</item>
+        <item name="android:windowActionBarOverlay">@color/white</item>
+    </style>
+</resources>

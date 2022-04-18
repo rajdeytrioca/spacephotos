@@ -1,18 +1,19 @@
 package com.sp.network
 
+import android.os.Build
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
+/*@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [Build.VERSION_CODES.P])*/
 @ExperimentalCoroutinesApi
-class ExampleUnitTest {
+class ApiTest {
 
     @get:Rule
     val coroutineTestRule = CoroutineTestRule()
@@ -22,7 +23,7 @@ class ExampleUnitTest {
         val spaceImageService = SpaceImageService.getInstance()
         coroutineTestRule.scope.runTest {
             val images = spaceImageService.getImages("mars")
-            assertEquals(1, images.body()?.size)
+            assertEquals(100, images.collection.items.size)
 
         }
     }
