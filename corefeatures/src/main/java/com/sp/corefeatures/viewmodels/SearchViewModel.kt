@@ -20,7 +20,6 @@ import java.lang.Exception
 
 class SearchViewModel(
     private val apiRepo: SpaceImageService,
-    private val coroutineContextProvider: CoroutineContextProvider
 ) : ViewModel() {
 
     companion object{
@@ -28,29 +27,15 @@ class SearchViewModel(
     }
 
     private val _fetched : MutableLiveData<Boolean> = MutableLiveData<Boolean>()
-    private lateinit var result : SearchResponse
     val fetched:LiveData<Boolean> = _fetched
     var imagePager: Flow<PagingData<SearchItem>>?=null
 
-
-
     fun submitSearch(query: String) {
        imagePager = Pager(
-            // Configure how data is loaded by passing additional properties to
-            // PagingConfig, such as prefetchDistance.
-            PagingConfig(pageSize = 100)
+            PagingConfig(pageSize = 20)
         ) {
             ImagePagingSource(apiRepo, query)
         }.flow
             .cachedIn(viewModelScope)
-
-    /* viewModelScope.launch(coroutineContextProvider.io) {
-            try {
-                result = apiRepo.getImages(query)
-                _fetched.postValue(true)
-            }catch (e:Exception){
-                Log.d(TAG, "submitSearch: ")
-            }
-        }*/
     }
 }

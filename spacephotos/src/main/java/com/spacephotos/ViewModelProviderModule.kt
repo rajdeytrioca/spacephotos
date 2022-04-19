@@ -18,5 +18,5 @@ val ViewModelProvidersModule = module {
     }
 
     viewModel { NavigatorViewModel() }
-    viewModel { SearchViewModel(get(),get()) }
+    viewModel { SearchViewModel(get()) }
 }

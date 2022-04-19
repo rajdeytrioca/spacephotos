@@ -21,4 +21,22 @@
         <item name="strokeColor">@color/dls_accent1</item>
         <item name="android:paddingEnd">12dp</item>
     </style>
+
+    <style name="buttonChip" parent="@style/Widget.MaterialComponents.Chip.Action">
+        <item name="chipStrokeWidth">2dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="chipStrokeColor">@color/dls_accent1</item>
+        <item name="chipBackgroundColor">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">@style/textstyle</item>
+        <item name="android:elevation">4dp</item>
+        <item name="textStartPadding">2dp</item>
+        <item name="chipMinTouchTargetSize">38dp</item>
+    </style>
+
+    <style name="textstyle">
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>

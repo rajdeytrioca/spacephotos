@@ -3,43 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="4dp"
-    android:layout_height="wrap_content"
-    android:layout_margin="4dp">
+    android:layout_height="match_parent">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivPhoto"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:paddingHorizontal="18dp"
-        android:ellipsize="end"
-        android:singleLine="true"
-        android:scrollHorizontally="false"
+        android:padding="8dp"
         android:textColor="@color/dls_accent1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivPhoto"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhoto" />
 
     <TextView
         android:id="@+id/desc"
         android:layout_width="0dp"
-        android:layout_marginStart="28dp"
-        android:maxLength="75"
-        android:textStyle="italic"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:layout_margin="18dp"
+        android:justificationMode="inter_word"
         android:textColor="@color/dls_secondary1"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivPhoto"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

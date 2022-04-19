@@ -22,7 +22,7 @@ class ApiTest {
     fun addition_isCorrect() {
         val spaceImageService = SpaceImageService.getInstance()
         coroutineTestRule.scope.runTest {
-            val images = spaceImageService.getImages("mars")
+            val images = spaceImageService.getImages("mars",1)
             assertEquals(100, images.collection.items.size)
 
         }

@@ -15,8 +15,9 @@ class ImageViewHolder(val binding: ImageListBinding,val context: Context) : Recy
         val link  = item?.links?.get(0)?.href
         Glide.with(context)
             .load(Uri.parse(link))
-            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
             .circleCrop()
+            .placeholder(R.drawable.placeholder)
             .into(binding.ivPhoto)
     }
 

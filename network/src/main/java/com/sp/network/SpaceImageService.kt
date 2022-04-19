@@ -9,12 +9,10 @@ import retrofit2.http.Query
 
 interface SpaceImageService {
 
-    @GET("search")
+    @GET("search?media_type=image")
     suspend fun getImages(
         @Query(value = "q") searchTerm: String,
         @Query(value = "page") page: Int,
-        @Query(value = "media_type") type: String = "image",
-        @Header(value = "Accept")  header:String = "application/json"
     ): SearchResponse
 
     companion object {
